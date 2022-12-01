@@ -1,4 +1,21 @@
-$color:red;
-body {
-    background: $color;
-} 
+@import './utils/vars';
+@import './utils/hidden';
+
+@import './base/reset';
+@import './base/common';
+
+
+@import './components/container';
+@import './components/modal';
+@import './components/header';
+@import './components/footer';
+
+
+
+@import './layouts/hero';
+@import './layouts/benefits';
+@import './layouts/activity';
+@import './layouts/team';
+@import './layouts/customers';
+@import './layouts/portfolio-filter';
+@import './layouts/portfolio';
