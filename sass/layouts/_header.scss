@@ -1,41 +1,37 @@
 .header {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--border);
+    &__logo {
+      @include font(null, 26px, 1.19, 0.03em);
+      font-family: var(--ff-raleway);
+      color: var(--logo-color-black);
+    }
+    &__desc {
+      @include font(null, null, 0.86, 0.03em);
+      color: var(--current-active);
+    }
   }
   
-  .header-flex {
+  .header__container,
+  .site-nav,
+  .login {
     @include flex(flex, center, null);
   }
-  
-  .header-logo {
-    font-family: var(--ff-raleway);
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    color: var(--logo-color-black);
-  }
-  
-  .header-nav {
+
+  .nav {
     margin-left: 93px;
     margin-right: auto;
   }
   
-  .header-desc,
-  .footer-desc {
-    line-height: 0.86;
-    letter-spacing: 0.03em;
-    color: var(--current-active);
-  }
-  
-  .header-item-link,
-  .header-items-link {
+  .site-nav__link,
+  .login-nav__link {
     @include font(500, 14px, 1.14, 0.02em);
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic-bezier);
   }
   
-  .header-item-link {
+  .site-nav__link {
     display: inline-block;
     padding: 32px 0;
     color: var(--primary-grey-dark);
@@ -44,37 +40,19 @@
       color: var(--current-active);
     }
   }
-  
-  .header-items-link {
-    @include flex(flex, center, null);
-    color: var(--secondary-grey);
-    &:hover,
-    &:hover {
-      color: var(--current-active);
-    }
-  }
-  
-  .header-items-link-icon {
-    margin-right: 10px;
-    fill: currentColor;
-  }
-  
-  .header-link .header-items:not(:last-child) {
-    margin-right: 31px;
-  }
 
-  .header-item-link.current {
+  .site-nav__link--current {
     color: var(--current-active);
   }
   
-  .header-item {
+  .site-nav__item {
     position: relative;
-    .header-list &:not(:last-child) {
+    .site-nav &:not(:last-child) {
       margin-right: 50px;
     }
   }
   
-  .current::after {
+  .site-nav__link--current::after {
     @include size(100%, 4px);
     position: absolute;
     bottom: 0;
@@ -83,4 +61,23 @@
     background: var(--current-active);
     border-radius: 2px;
   }
+  
+  .login-nav__link {
+    @include flex(flex, center, null);
+    color: var(--secondary-grey);
+    &:hover,
+    &:hover {
+      color: var(--current-active);
+    }
+  }
+  
+  .login-nav__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  
+  .login-nav:not(:last-child) {
+    margin-right: 31px;
+  }
+
   

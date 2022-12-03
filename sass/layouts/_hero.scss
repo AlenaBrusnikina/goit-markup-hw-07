@@ -9,31 +9,29 @@
       url(../images/hero-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    &__container {
+      @extend %talign;
+    }
+    &__title {
+      @include font(900, 44px, 1.36, 0.06em);
+      @extend %talign;
+      text-transform: uppercase;
+      color: var(--color-white);
+      margin-bottom: 30px;
+    }
   }
   
-  .hero-center {
-    @extend %talign;
-  }
-  
-  .hero-title {
-    @include font(900, 44px, 1.36, 0.06em);
-    @extend %talign;
-    text-transform: uppercase;
-    color: var(--color-white);
-    margin-bottom: 30px;
-  }
-  
-  .hero-btn {
+  .hero__btn {
     @include font(700, 16px, 1.88, 0.06em);
     font-family: inherit;
     @extend %talign;
     padding: 10px 32px;
     color: var(--color-white);
     background-color: var(--current-active);
-    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: 0;
+    cursor: pointer;
     transition: background-color 250ms var(--cubic-bezier);
       &:hover,
       &:focus {
