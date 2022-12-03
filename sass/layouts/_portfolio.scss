@@ -53,24 +53,18 @@
   
  
   .portfolio-box-text {
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
+    @include font(null, 18px, 1.56, 0.03em);
     color: var(--color-white);
   }
   
   .portfolio-item-title {
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font(null, 18px, 2, 0.06em);
     color: var(--primary-grey-dark);
     margin-bottom: 4px;
   }
   
   .portfolio-item-text {
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+    @include font(null, 16px, 1.88, 0.03em);
     color: var(--secondary-grey);
   }
   

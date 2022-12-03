@@ -3,15 +3,13 @@
   }
   
   .activity-title {
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
+    @include font(null, 36px, 1.17, 0.03em);
+    @extend %talign;
     margin-bottom: 50px;
   }
   
   .activity-list {
-    display: flex;
+    @include flex(flex, null, null);
     gap: 30px;
   }
   
@@ -20,23 +18,17 @@
   }
   
   .activity-box {
+    @include flex(flex, center, center);
+    @include size(100%, 70px);
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--activity-bg);
   }
   
   .activity-box-text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    text-align: center;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
+    @extend %talign;
     text-transform: uppercase;
     color: var(--color-white);
   }

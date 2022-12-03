@@ -1,17 +1,12 @@
 .portfolio-buttons {
-    display: flex;
-    justify-content: center;
+    @include flex(flex, null, center);
     gap: 8px;
     margin-bottom: 50px;
   }
   
   .portfolio-btn {
+    @include font(500, 16px, 1.62, 0.03em);
     font-family: inherit;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-    text-align: center;
-    letter-spacing: 0.03em;
     color: var(--primary-grey-dark);
     background-color: var(--btn-bg);
     cursor: pointer;

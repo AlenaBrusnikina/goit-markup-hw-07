@@ -4,17 +4,14 @@
   }
   
   .footer-wrap {
-    display: flex;
-    align-items: baseline;
+    @include flex(flex, baseline, null);
     gap: 93px;
   }
   
   .footer-logo {
+    @include font(null, 26px, 1.19, 0.03em);
     display: block;
     font-family: var(--ff-raleway);
-    font-size: 26px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
     color: var(--color-white);
     margin-bottom: 20px;
   }
@@ -26,10 +23,8 @@
   .footer-item-maps,
   .footer-item-mail,
   .footer-item-tel {
+    @include font(null, 14px, 1.71, 0.03em);
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
     transition: color 250ms var(--cubic-bezier);
   }
   
@@ -53,10 +48,7 @@
   }
   
   .footer-title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--color-white);
   }
@@ -70,13 +62,12 @@
   }
   
   .footer-form {
-    display: flex;
+    @include flex(flex, null, null);
     margin-left: auto;
   }
   
   .footer-form-email {
-    width: 358px;
-    height: 50px;
+    @include size(358px, 50px);
     margin-right: 12px;
     padding-left: 16px;
     border: 1px solid var(--footer-form-email);
@@ -90,24 +81,15 @@
       outline: var(--current-active);
     }
     &:placeholder {
-      font-size: 16px;
-      line-height: 1.25;
-      letter-spacing: 0.03em;
+      @include font(null, 16px, 1.25, 0.03em);
       color: var(--footer-item-link);
     }
   }
 
-  
-  .footer-form-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 50px;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    .footer-form-btn {
+    @include flex(flex, center, center);
+    @include size(200px, 50px);
+    @include font(700, 16px, 1.88, 0.06em);
     color: var(--color-white);
     background-color: var(--current-active);
     box-shadow: 0px 4px 4px var(--footer-btn);

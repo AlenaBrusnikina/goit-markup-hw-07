@@ -37,9 +37,7 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(flex, center, center);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -62,11 +60,8 @@
   }
   
   .modal-text {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
+    @include font(700, 20px, 1.15, 0.03em);
+    @extend %talign;
     color: var(--primary-grey-dark);
     margin-bottom: 12px;
   }
@@ -80,9 +75,7 @@
   
   .form-field-text,
   .form-field-comment::placeholder {
-    font-size: 12px;
-    line-height: 1.67;
-    letter-spacing: 0.01em;
+    @include font(null, 12px, 1.67, 0.01em);
   }
   
   .form-field-text {
@@ -134,9 +127,7 @@
   }
   
   .checkbox-field {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex(flex, center, center);
   }
   
   .checkbox-field-input {
@@ -165,9 +156,7 @@
   
   .checkbox-field-text,
   .checkbox-field-link {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include font(null, 14px, 1.71, 0.03em);
   }
   
   .checkbox-field-text {
@@ -194,12 +183,9 @@
 
   .form-send-btn {
     display: flex;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(700, 16px, 1.88, 0.06em);
     color: var(--color-white);
-    text-align: center;
+    @extend %talign;
     padding: 10px 52px;
     margin: 0 auto;
     background: var(--current-btn);

@@ -12,27 +12,21 @@
   }
   
   .hero-center {
-    text-align: center;
+    @extend %talign;
   }
   
   .hero-title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.06em;
+    @include font(900, 44px, 1.36, 0.06em);
+    @extend %talign;
     text-transform: uppercase;
     color: var(--color-white);
     margin-bottom: 30px;
   }
   
   .hero-btn {
+    @include font(700, 16px, 1.88, 0.06em);
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.06em;
+    @extend %talign;
     padding: 10px 32px;
     color: var(--color-white);
     background-color: var(--current-active);
