@@ -2,7 +2,7 @@
     padding-bottom: 94px;
   }
   
-  .activity-title {
+  .activity__title {
     @include font(null, 36px, 1.17, 0.03em);
     @extend %talign;
     margin-bottom: 50px;
@@ -11,24 +11,23 @@
   .activity-list {
     @include flex(flex, null, null);
     gap: 30px;
+      &__wrap {
+        position: relative;
+      }
+      &__box {
+        @include flex(flex, center, center);
+        @include size(100%, 70px);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--activity-bg);
+      }
+      &__text {
+        @include font(700, 14px, 1.14, 0.03em);
+        @extend %talign;
+        text-transform: uppercase;
+        color: var(--color-white);
+      }
   }
   
-  .activity-wrap {
-    position: relative;
-  }
   
-  .activity-box {
-    @include flex(flex, center, center);
-    @include size(100%, 70px);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--activity-bg);
-  }
-  
-  .activity-box-text {
-    @include font(700, 14px, 1.14, 0.03em);
-    @extend %talign;
-    text-transform: uppercase;
-    color: var(--color-white);
-  }

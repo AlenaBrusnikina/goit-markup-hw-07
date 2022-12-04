@@ -1,14 +1,14 @@
-.footer {
+.page-footer {
     background: var(--hero-bg);
     padding: 60px 0;
   }
   
-  .footer-wrap {
+  .page-footer__container {
     @include flex(flex, baseline, null);
     gap: 93px;
   }
   
-  .footer-logo {
+  .footer__logo {
     @include font(null, 26px, 1.19, 0.03em);
     display: block;
     font-family: var(--ff-raleway);
@@ -16,54 +16,55 @@
     margin-bottom: 20px;
   }
   
-  .footer-item-maps {
+  .footer-list__maps {
     color: var(--color-white);
   }
   
-  .footer-item-maps,
-  .footer-item-mail,
-  .footer-item-tel {
+  .footer-list__maps,
+  .footer-list__mail,
+  .footer-list__tel {
     @include font(null, 14px, 1.71, 0.03em);
     font-style: normal;
     transition: color 250ms var(--cubic-bezier);
   }
   
-  .footer-item-mail,
-  .footer-item-tel {
+  .footer-list__mail,
+  .footer-list__tel {
     display: block;
     margin-top: 9px;
     color: var(--footer-item-link);
   }
   
-  .footer-item-mail:hover,
-  .footer-item-tel:hover,
-  .footer-item-maps:hover {
+  .footer-list__mail:hover,
+  .footer-list__tel:hover,
+  .footer-list__maps:hover {
     color: var(--current-active);
   }
   
-  .footer-item-mail:focus,
-  .footer-item-tel:focus,
-  .footer-item-maps:focus {
+  .footer-list__mail:focus,
+  .footer-list__tel:focus,
+  .footer-list__maps:focus {
     color: var(--current-active);
   }
   
-  .footer-title {
+  .footer-icons__title,
+  .footer-link__text {
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: var(--color-white);
   }
 
-  .footer-desc {
+  .footer-link__text {
+    margin-bottom: 20px;
+  }
+
+  .footer__desc {
     @include font(null, null, 0.86, 0.03em);
     color: var(--current-active);
   }
   
-  .icons-bg {
+  .team-icons__link--bg {
     background-color: var(--icons-bg);
-  }
-
-  .footer-link-text {
-    margin-bottom: 20px;
   }
   
   .footer-form {
@@ -71,7 +72,7 @@
     margin-left: auto;
   }
   
-  .footer-form-email {
+  .footer-form__email {
     @include size(358px, 50px);
     margin-right: 12px;
     padding-left: 16px;
@@ -91,7 +92,7 @@
     }
   }
 
-    .footer-form-btn {
+    .footer-form__btn {
     @include flex(flex, center, center);
     @include size(200px, 50px);
     @include font(700, 16px, 1.88, 0.06em);
@@ -108,7 +109,7 @@
     }
   }
   
-  .footer-form-img {
+  .footer-form__img {
     margin-left: 10px;
   }
   
