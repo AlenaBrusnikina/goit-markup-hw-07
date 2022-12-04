@@ -10,11 +10,11 @@
     background-repeat: no-repeat;
     background-position: center;
     &__container {
-      @extend %talign;
+      text-align: center;
     }
     &__title {
       @include font(900, 44px, 1.36, 0.06em);
-      @extend %talign;
+      text-align: center;
       text-transform: uppercase;
       color: var(--color-white);
       margin-bottom: 30px;
@@ -24,7 +24,7 @@
   .hero__btn {
     @include font(700, 16px, 1.88, 0.06em);
     font-family: inherit;
-    @extend %talign;
+    text-align: center;
     padding: 10px 32px;
     color: var(--color-white);
     background-color: var(--current-active);

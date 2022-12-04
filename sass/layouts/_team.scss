@@ -4,7 +4,7 @@
     
     &__title {
       @include font(null, 36px, 1.17, 0.03em);
-      @extend %talign;
+      text-align: center;
       margin-bottom: 50px;
     }
     
@@ -27,13 +27,13 @@
 
     &__title {
       @include font(500, 16px, 1.19, 0.03em);
-      @extend %talign;
+      text-align: center;
       margin-bottom: 10px;
     }
 
     &__text {
       @include font(null, 16px, 1.19, 0.03em);
-      @extend %talign;
+      text-align: center;
       color: var(--secondary-grey);
     }
   }

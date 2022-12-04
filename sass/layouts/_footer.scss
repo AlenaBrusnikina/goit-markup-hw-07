@@ -1,13 +1,12 @@
 .page-footer {
     background: var(--hero-bg);
     padding: 60px 0;
+    &__container {
+      @include flex(flex, baseline, null);
+      gap: 93px;
+    } 
   }
-  
-  .page-footer__container {
-    @include flex(flex, baseline, null);
-    gap: 93px;
-  }
-  
+ 
   .footer__logo {
     @include font(null, 26px, 1.19, 0.03em);
     display: block;
